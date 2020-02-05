@@ -73,3 +73,27 @@ Tensorflow 和 PyTorch 均可自动完成这个操作。 当然我们也可以�
 
 ![image-20200204123843502](https://tva1.sinaimg.cn/large/006tNbRwgy1gbkng8hlzlj313406u0u2.jpg)
 
+### 6. 合并拆分
+
+合并和拆分是非常常见的张量操作，对应的是 concat 和 split。Tensorflow 对应 `tf.concat`和`tf.split` PyTorch对应 `.cat` 和`.split`，这两个操作都不会改变张量的维度。
+
+举一个例子，一个3维张量对应 班级，学生，各科成绩 [classes, students, scores] ，我们可以在三个维度上对这个张量进行合并和拆分。
+
+> 如果在 dim/axis=0 上合并，既合并班级 ，此时 students, scores 维度上数值必须保持一致，既学生数量和科目数量必须保持一致。
+>
+> 如果在 dim/axis=1 上合并，既合并学生 ，此时 classes, scores 维度上数值必须保持一致，既班级数量和科目数量必须保持一致。
+>
+> 如果在 dim/axis=0 上合并，既合并成绩 ，此时 classes, student 维度上数值必须保持一致，既班级数量和学生数量必须保持一致。
+
+拆分也是同样的道理，在传入参数的 `num_or_size_splits` 如果传入一个数字，既表示在该维度下每份的大小，如果传入的是一个 list, 既表示按照 list 中的大小进行拆分。
+
+![image-20200205154552775](https://tva1.sinaimg.cn/large/006tNbRwgy1gblyhcssmkj30ou0cpn07.jpg)
+
+另外还有一个概念需要区分就是 stack 和 unstack
+
+> stack 会在相应维度前面新加一个维度，所以被 stack 的张量在每个维度上的大小必须一致。
+>
+> tf.unstack 会将该维度完全拆散，既[3,32,8] -> axis=0 下 ->unstack 为三个[32,8]的矩阵。
+>
+> torch.chunk 与split 概念一致，是指在该维度下**均分**为多少份
+
