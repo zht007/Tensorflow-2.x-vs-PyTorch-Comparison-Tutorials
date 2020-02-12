@@ -1,6 +1,10 @@
 # Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials
 Tensorflow 2.x 和 PyTorch 对比学习教程。小孩才做选择，成年人全都要。
 
+如欢迎关注我的微信公众号 **tensor_torch**，共同学习，一起进步。
+
+![image-20200212122255731](https://tva1.sinaimg.cn/large/0082zybpgy1gbtvy4ldqnj30760760tn.jpg)
+
 -------
 
 为了更好的代码阅读体验请安装 jupyter notebook 的分栏插件。
@@ -29,9 +33,9 @@ jupyter contrib nbextension install --user
 
 2. [Mathematical_Operation_数学运算](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Mathematical_Operation_数学运算)
 
-3. 高级操作
+3. [Advanced_Operation_高级操作](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Advanced_Operation_高级操作)
 
-4. 模型创建和训练
+4. [Gradient_梯度计算](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Gradient_梯度计算)
 
 5. 神经网咯
 
