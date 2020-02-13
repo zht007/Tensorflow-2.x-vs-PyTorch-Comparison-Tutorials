@@ -37,7 +37,7 @@ jupyter contrib nbextension install --user
 
 4. [Gradient_梯度计算](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Gradient_梯度计算)
 
-5. 神经网咯
+5. [Full_Connected_NN_全连接神经网络](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Full_Connected_NN_全连接神经网络)
 
 6. CNN 
 
