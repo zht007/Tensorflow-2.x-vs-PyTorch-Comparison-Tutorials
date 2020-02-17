@@ -25,7 +25,7 @@ $$
 > 1. Tensorflow 中只有 Variables 才能被自动求导，如果是 constant 的张量需要 被`tape.watch()`。
 > 2. 在 PyTorch 中张量需要开启 `requires_grad = True` 其计算才会被记录。
 > 3. Tensorflow 中使用 `with tf.GradientTape() as tape:` 包裹并记录计算过程以便求导，PyTorch 会自动记录变量的计算过程。
-> 4. Tensorflow 中 `tape.gradient(y, [x])` 返回的是一个list，与之向对应 `torch.autograd.grad(y, [x])` 返回的是元组(tuple).
+> 4. Tensorflow 中 `tape.gradient(y, [x])` 返回的是一个list，与之相对应 `torch.autograd.grad(y, [x])` 返回的是元组(tuple).
 > 5. PyTorch 还可以使用 y.backward() 对所有参数自动求导，然后用`.grad` 获取相应参数的导数
 
 ```python
@@ -53,7 +53,7 @@ print(x.grad)
 
 ### 2. MSE 损失函数求导
 
-MSE 既 Mean Square Root (均方差) 损失函数在机器学习中用得非常广泛的一个算是函数。其物理意义就是计算预测值与真实值之间的*“距离”*并取其平均数。优化模型的过程就是*”缩短“* 这个距离的过程。
+MSE 既 Mean Square Root (均方差) 损失函数在机器学习中用得非常广泛的一个损失函数。其物理意义就是计算预测值与真实值之间的*“距离”*并取其平均数。优化模型的过程就是*”缩短“* 这个距离的过程。
 
 这里我们假设了一个场景：
 
@@ -258,7 +258,7 @@ for step in range(30000):
 
 > 1. 在 Tensorflow 中，我们首先定义一个优化器 `optimizer`, 在训练过程中使用 `optimizer.apply_gradients(zip(grads, [x]))` 既可完成训练。
 > 2. 在 PyTorch 中，也需要首先定义一个  `optimizer` 并指定优化参数， 在训练中，zero_grad() backward(), step() 三步即可完成训练。
-> 3. SGD 既随机梯度下降，将其变换成 Adam 就会解决SGD找不到真正 零点的问题，敢兴趣的读者不妨试试。
+> 3. SGD 既随机梯度下降，将其变换成 Adam 就会解决SGD找不到真正 零点的问题，感兴趣的读者不妨试试。
 
 ```python
 # ------------------------Tensorflow -----------------------------
