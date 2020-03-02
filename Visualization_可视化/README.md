@@ -1,10 +1,14 @@
-之前讨论 Tensorflow 2.0 的文章中我们介绍了其非常强大的可视化工具：Tensorboard。虽然 PyTorch 中我们可以使用非官方的 Tensorboarx 来实现相同的功能，但是我们更推荐 Facebook 的可视化工具 Visdom。这篇文章我们就通过对比 Tensorboard 的形式介绍 Visdom。
+![white printed poster](https://tva1.sinaimg.cn/large/00831rSTgy1gcfug7ue2hj30rs0ijmz4.jpg)
 
-本文中数据导入和模型建立与上一篇文章中的代码一致就不在这里赘述了。
+*image from unsplash.com by [@markusspiske](https://unsplash.com/@markusspiske)*
+
+之前讨论 Tensorflow 2.0 的文章中我们介绍了其非常强大的可视化工具：Tensorboard。虽然 PyTorch 中我们可以使用非官方的 Tensorboarx 来实现相同的功能，但是我们更推荐 PyTorch 的东家 Facebook 出品的可视化工具 Visdom。这篇文章我们通过对比 Tensorboard 的形式介绍和学习 Visdom。
+
+本文中关于数据导入和模型建立与训练部分与上一篇文章中的一致，就不在这里赘述了。
 
 ### 1. Tensorboard 回顾
 
-简单来说，tensorboard 就是通过监听定目录下的 log 文件然后在 Web 端将 log 文件中需要监听的变量可视化出来的过程。
+简单来说，tensorboard 就是通过监听指定目录下的 log 文件，然后在 Web 端将 log 文件中需要监听的变量可视化出来的过程。
 
 所以，使用 Tensorboard 大致分为以下三步：
 
@@ -12,7 +16,7 @@
 > 2. 创建 `summary_writer` 对象写入 `logdir`
 > 3. 将数据写入到 `summary_writer` 中
 
-查看 Tensorboard 需要在终端(windows cmd) 中 cd 到当前目录并输入以下命，其中 'logs' 就是我们需要监听的目录。
+查看 Tensorboard 需要在终端( 或 windows cmd) 中 cd 到当前目录并输入以下命令，其中 'logs' 就是我们需要监听的目录。
 
 ```
 tensorboard --logdir logs
@@ -22,7 +26,7 @@ tensorboard --logdir logs
 
 ### 2. Visdom 使用简介
 
-Visdom 同样也需要在浏览器中查看，与Tensorboard 不同，我们并不需要事先创建一个 log 目录，仅需要在终端 (Windows CMD) 中输入如下命令，建立visdom 环境的服务器。
+Visdom 同样也需要在浏览器中查看，与Tensorboard 不同，我们并不需要事先创建一个 log 目录，仅需要在终端 (或Windows CMD) 中输入如下命令，建立visdom 环境的服务器。
 
 ```
 python -m visdom.server
@@ -32,8 +36,8 @@ python -m visdom.server
 
 > 1. Tensorboard 创建 `summary_writer=tf.summary.create_file_writer(log_dir)`对象；相应的 Visdom 中创建` vis = Visdom()`对象。
 > 2. Tensorboard 使用 `with summary_writer.as_default():` 包裹 `tf.summary.scalar` 监听 scalar 的变化；同样的，Visdom() 中使用 `vis.line` 将监听对象的变化用 line 画出来。
-> 3. Tensorboard 中 `tf.summary.scalar` 的参数 data 和 step 对应 `vis.line` 中的参数 Y 和 X。
-> 4. 注意 vis.line 中的 Y 和 X 接受的是一个list，我们可以在这个list 中添加多个监听对象从而实现一个坐标图中监听多个变量。
+> 3. Tensorboard 中 `tf.summary.scalar` 的参数 **data** 和 **step** 对应 `vis.line` 中的参数 **Y** 和 **X**。
+> 4. 注意 vis.line 中的 Y 和 X 接受的是一个**list**，我们可以在这个list 中添加多个监听对象从而实现一个坐标图中同时监听多个变量。
 > 5. Tensorboard 中使用`tf.summary.image` 显示图片其shape 为[b, w, h ,c]，Visdom 使用`vis.images` 显示图片图片shape 为[b, c, w, h]，
 
 ### 3. 代码对比
@@ -142,4 +146,4 @@ for epoch in range(epochs):
 
 Tensorboard 和 Visdom 原理类似，各有优缺点。个人感觉 Visdom 更为简洁和高效，并且图表刷新速度也比 Tensorboard 快很多。
 
-另外，在 Tensorflow 中仍然可以使用 Visdom，此时仅需要将监听的对象转换成 numpy 格式即可，这部分内容请见完整的源代码。
+另外，在 Tensorflow 中也可以使用 Visdom，此时仅需要将监听的对象转换成 numpy 格式即可，这部分内容请见完整的源代码。
