@@ -1,9 +1,27 @@
 # Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials
 Tensorflow 2.x 和 PyTorch 对比学习教程。小孩才做选择，成年人全都要。
 
-如欢迎关注我的微信公众号 **tensor_torch**，共同学习，一起进步。
+### 教程内容
 
-![image-20200212122255731](https://tva1.sinaimg.cn/large/0082zybpgy1gbtvy4ldqnj30760760tn.jpg)
+1. [Basic_Operastion_基本操作](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Basic_Operastion_基本操作)
+
+2. [Mathematical_Operation_数学运算](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Mathematical_Operation_数学运算)
+
+3. [Advanced_Operation_高级操作](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Advanced_Operation_高级操作)
+
+4. [Gradient_梯度计算](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Gradient_梯度计算)
+
+5. [Full_Connected_NN_全连接神经网络](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Full_Connected_NN_全连接神经网络)
+
+6. [Visualization_可视化](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Visualization_可视化)
+
+7. CNN 
+
+8. RNN
+
+   .....
+
+
 
 -------
 
@@ -25,23 +43,8 @@ jupyter contrib nbextension install --user
 
 ![image-20200204093312261](https://tva1.sinaimg.cn/large/006tNbRwgy1gbki39f6v4j30qa0eg0uj.jpg)
 
-------
+--------
 
-### 教程内容
+欢迎关注我的微信公众号 **tensor_torch**，共同学习，一起进步。
 
-1. [Basic_Operastion_基本操作](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Basic_Operastion_基本操作)
-
-2. [Mathematical_Operation_数学运算](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Mathematical_Operation_数学运算)
-
-3. [Advanced_Operation_高级操作](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Advanced_Operation_高级操作)
-
-4. [Gradient_梯度计算](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Gradient_梯度计算)
-
-5. [Full_Connected_NN_全连接神经网络](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Full_Connected_NN_全连接神经网络)
-
-6. CNN 
-
-7. RNN
-
-   .....
-
+![image-20200212122255731](https://tva1.sinaimg.cn/large/0082zybpgy1gbtvy4ldqnj30760760tn.jpg)
