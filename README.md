@@ -15,7 +15,7 @@ Tensorflow 2.x 和 PyTorch 对比学习教程。小孩才做选择，成年人�
 
 6. [Visualization_可视化](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Visualization_可视化)
 
-7. CNN 
+7. [Regularization_dropout_lr_deacy_正则化等措施](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Regularization_dropout_lr_deacy_正则化等措施)
 
 8. RNN
 
