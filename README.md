@@ -19,6 +19,8 @@ Tensorflow 2.x 和 PyTorch 对比学习教程。小孩才做选择，成年人�
 
 8. [Convolutional_Neural_Network_卷积神经网络](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Convolutional_Neural_Network_卷积神经网络)
 
+9. [Recurrent_Neural_Network_循环神经网络](https://github.com/zht007/Tensorflow-2.x-vs-PyTorch-Comparison-Tutorials/tree/master/Recurrent_Neural_Network_循环神经网络)
+
    ......持续更新中....
 
 
